@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Harry Potter Swapper",
+  "version": "0.1",
+  "description": "Replaces all images on a webpage with images from the Harry Potter movies and replaces the word 'be' with a Harry Potter spell from the books or movies.",
+  "icons": {
+    "16": "lightningbolt16.png",
+    "48": "LightningBoltBlack48.png",
+    "128": "LightningBoltBlackCircle128.png"
+  },
+  "author": "Courtney Downs",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["./styles.css"],
+      "js": ["./harryPotterImages.js", "./harryPotterSpells.js"]
+    }
+  ],
+  "web_accessible_resources": ["assets/*.jpeg"]
+}
